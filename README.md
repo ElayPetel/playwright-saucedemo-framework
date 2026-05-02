@@ -1,47 +1,97 @@
+# 🎭 Playwright Automation Framework | Swag Labs E2E Suite
 
-# 🎭 Playwright Automation Framework | SauceDemo E2E Suite
-
-A production-ready End-to-End (E2E) automation framework built with **Playwright**, **TypeScript**, and **Page Object Model (POM)** architecture. This project automates the core business flows of the "Swag Labs" (SauceDemo) e-commerce platform.
+[![Playwright Tests](https://img.shields.io/badge/Framework-Playwright-28a745.svg?style=for-the-badge&logo=playwright)](https://playwright.dev/)
+[![TypeScript](https://img.shields.io/badge/Language-TypeScript-3178C6.svg?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg?style=for-the-badge)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 ---
 
-## 🏗️ Architecture & Best Practices
+## 🌟 Overview
+This repository showcases a **professional-grade End-to-End (E2E) automation framework** built for the SauceDemo (Swag Labs) platform. Designed for reliability and speed, it demonstrates how to handle modern web challenges using industry best practices.
 
-This framework is designed with a focus on scalability and reliability, implementing several industry-standard patterns:
-
-*   **Page Object Model (POM):** Decouples test logic from UI locators, making the suite easier to maintain.
-*   **Data-Driven Testing (DDT):** Uses external JSON files to drive test scenarios with different user personas.
-*   **Type Safety:** Fully written in TypeScript to catch errors at compile-time.
-*   **Explicit Waits:** Leverages Playwright's auto-waiting mechanism to eliminate flaky tests.
-*   **Reporters:** Configured with detailed HTML reporting and trace viewing for fast debugging.
+### ✨ Key Features
+*   **🧩 Page Object Model (POM):** Clean separation of concerns between test scripts and UI logic.
+*   **📊 Data-Driven Testing (DDT):** Seamless test execution using dynamic JSON data sets.
+*   **🛡️ Robust Locators:** Implementation of resilient selectors to minimize test fragility.
+*   **📈 Advanced Reporting:** Detailed HTML reports with embedded screenshots and failure traces.
+*   **⚡ Parallel Execution:** Optimized for high-speed testing across multiple browsers.
 
 ---
 
 ## 🚀 Getting Started
 
-Follow these steps to set up the project on your local machine and run your first test.
+Follow these steps to get your local environment up and running in minutes.
 
-### 1. Prerequisites
-Ensure you have [Node.js](https://nodejs.org/) (LTS version) installed on your system.
+### 1️⃣ Installation
+Ensure you have [Node.js](https://nodejs.org/) installed, then run:
 
-### 2. Installation
-Clone the repository and install the project dependencies:
+    # Clone the repository
+    git clone https://github.com/ElayPetel/playwright-saucedemo-framework.git
 
-```bash
-# Clone the repository
-git clone https://github.com/ElayPetel/playwright-saucedemo-framework.git
+    # Enter the directory
+    cd playwright-saucedemo-framework
 
-# Navigate to the project directory
-cd playwright-saucedemo-framework
+    # Install dependencies
+    npm install
 
-# Install NPM packages
-npm install
+    # Install browser binaries (Chromium, Firefox, Webkit)
+    npx playwright install
 
-# Install Playwright browser binaries
-npx playwright install
+---
 
-Scenario,Command to Type,What it does
-Standard Run,npx playwright test,Runs all tests in the background (Fastest).
-Watch it Work,npx playwright test --headed,Opens a real browser window so you can watch the automation.
-Visual Dashboard,npx playwright test --ui,Opens an interactive window to run and debug tests manually.
-Specific File,npx playwright test tests/login.spec.ts,"Runs only the tests inside the ""login"" file."
+### 2️⃣ Running Tests
+Use the following commands to execute tests in different environments:
+
+| Scenario | Command | Description |
+| :--- | :--- | :--- |
+| 🚀 **Headless Mode** | `npx playwright test` | The fastest way - runs in the background. |
+| 👀 **Headed Mode** | `npx playwright test --headed` | Watch the browser perform the actions live. |
+| 🛠️ **UI Mode** | `npx playwright test --ui` | Interactive dashboard for debugging & development. |
+| 📄 **Specific File** | `npx playwright test tests/login.spec.ts` | Runs only the selected test file. |
+| 🕵️ **Debug Mode** | `npx playwright test --debug` | Step-through execution for deep troubleshooting. |
+
+---
+
+### 3️⃣ Generating Reports
+After the run is complete, generate and view the visual report:
+
+    npx playwright show-report
+
+---
+
+## 📁 Project Structure
+
+    ├── data/               # 📂 JSON files for data-driven testing
+    ├── pages/              # 🏗️ POM: UI Locators and action methods
+    ├── tests/              # 🧪 E2E test specifications
+    ├── playwright.config.ts # ⚙️ Global configuration & environment settings
+    └── package.json        # 📦 Project dependencies and scripts
+
+---
+
+## 📸 Screenshots & Artifacts
+*The framework automatically captures these on failure:*
+*   **Screenshots:** Visual proof of the UI state at the moment of failure.
+*   **Traces:** Full recording of the test execution (DOM snapshots, network calls).
+*   **Videos:** Playback of the user journey.
+
+---
+
+## 🛠️ Tech Stack
+*   **Automation Engine:** Playwright
+*   **Language:** TypeScript
+*   **Version Control:** Git & GitHub
+*   **IDE:** VS Code
+
+---
+
+## 👤 Author
+**Elay Petel**  
+*Automation Engineer*
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/YOUR-PROFILE) 
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat&logo=github)](https://github.com/ElayPetel)
+
+---
+*Built with ❤️ for better software quality.*
