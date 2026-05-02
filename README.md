@@ -39,3 +39,9 @@ npm install
 
 # Install Playwright browser binaries
 npx playwright install
+
+Scenario,Command to Type,What it does
+Standard Run,npx playwright test,Runs all tests in the background (Fastest).
+Watch it Work,npx playwright test --headed,Opens a real browser window so you can watch the automation.
+Visual Dashboard,npx playwright test --ui,Opens an interactive window to run and debug tests manually.
+Specific File,npx playwright test tests/login.spec.ts,"Runs only the tests inside the ""login"" file."
