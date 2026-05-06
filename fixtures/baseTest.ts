@@ -1,12 +1,14 @@
 import { test as base } from '@playwright/test';
 import { LoginPage } from '../Pages/LoginPage';
-import { HomePage } from '@/Pages/HomePage';
+import { InventoryPage } from '@/Pages/InventoryPage';
+import { ProductPage } from '@/Pages/ProductPage';
 
 // 1. Define the types for your fixtures
 // This tells TypeScript which Page Objects will be available in your tests
 type MyFixtures = {
     loginPage: LoginPage;
-    homePage: HomePage;
+    inventoryPage: InventoryPage;
+    productPage: ProductPage;
     // Future pages can be added here, e.g., dashboardPage: DashboardPage;
 };
 
@@ -29,9 +31,14 @@ export const test = base.extend<MyFixtures>({
         // await loginPage.logout();
     },
 
-    homePage: async ({page}, use) => {
-        const homePage = new HomePage(page);
-        await use(homePage);
+    inventoryPage: async ({page}, use) => {
+        const inventoryPage = new InventoryPage(page);
+        await use(inventoryPage);
+    },
+
+    productPage: async ({page}, use) => {
+        const productPage = new ProductPage(page);
+        await use(productPage);
     }
 });
 
