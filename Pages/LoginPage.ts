@@ -12,13 +12,14 @@ export class LoginPage {
     // Constructor
     constructor(page: Page) {
         this.page = page;
-        this.usernameInput = page.locator('#user-name'); 
-        this.passwordInput = page.locator('#password');
-        this.loginButton = page.locator('#login-button');
+        this.usernameInput = this.page.locator('#user-name'); 
+        this.passwordInput = this.page.locator('#password');
+        this.loginButton = this.page.locator('#login-button');
     }
 
     // Methods
-    async login(user: string, pass: string) {
+    async fullLogin(user: string, pass: string) {
+        await this.validateLoginPageLoad();
         await this.usernameInput.fill(user);
         await this.passwordInput.fill(pass);
         await this.loginButton.click();

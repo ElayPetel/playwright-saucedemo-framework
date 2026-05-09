@@ -28,4 +28,8 @@ export abstract class BasePage {
     async clickMenuButtton() {
         await this.menuBtn.click();
     }
+
+    async AssertPricesAreEqual(priceStartingPage: number, priceNewPage: number) {
+        expect(priceStartingPage).toBe(priceNewPage);
+    }
 }
