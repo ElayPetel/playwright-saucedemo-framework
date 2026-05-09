@@ -2,19 +2,24 @@
 import { Page, Locator, expect } from '@playwright/test';
 
 export class LoginPage { 
+
+    // DM Members
     readonly page: Page; 
     readonly usernameInput: Locator; 
     readonly passwordInput: Locator;
     readonly loginButton: Locator;
 
+    // Constructor
     constructor(page: Page) {
         this.page = page;
-        this.usernameInput = page.locator('#user-name'); 
-        this.passwordInput = page.locator('#password');
-        this.loginButton = page.locator('#login-button');
+        this.usernameInput = this.page.locator('#user-name'); 
+        this.passwordInput = this.page.locator('#password');
+        this.loginButton = this.page.locator('#login-button');
     }
 
-    async login(user: string, pass: string) {
+    // Methods
+    async fullLogin(user: string, pass: string) {
+        await this.validateLoginPageLoad();
         await this.usernameInput.fill(user);
         await this.passwordInput.fill(pass);
         await this.loginButton.click();
